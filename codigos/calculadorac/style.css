@@ -1,16 +1,19 @@
 #body-container {
+    height: 1780px;
+    width: 90%;
     text-align: unset;
-    width: 1250px;
-    height: 1820px;
     background-color: #eeeeee;
     border: 1px solid black;
+    padding: 0 5px 0 0;
+    font-size: 12px;
 }
 
 #body-container h2 {
     text-align: center;
-    padding: 5px 0 5px 0;
+    padding: 10px 0 10px 0;
+    font-size: 20px;
 }
 
-#body-container code {
-    margin: 0 auto;
-}
+
+
+
