@@ -28,127 +28,131 @@
                 <h2>Calculadora em C</h2>
                 <pre>
                     <code>
-    #include "stdio.h"
-    #include "locale.h"
-    #include "iostream"
-                                
-    float n1, n2, resultado;
-    char operacao, memoriaResultado, novaOperacao;
-                                
-    char selecionarOperacao();
-    void mostrarResultado();
-    float calcSoma(float x, float y);
-    float calcSubtracao(float x, float y);
-    float calcMultiplicacao(float x, float y);
-    float calcDivisao(float x, float y);
-                        
-    int main()
-    {
-        setlocale(LC_ALL, "Portuguese");
-        do {
-            if (memoriaResultado == 's') {
-                n1 = resultado;
-            }
-            else {
-                printf("Digite o primeiro valor: ");
-                scanf("%f", &n1);
-                fflush(stdin);
-            }
-            printf("Digite o segundo valor: ");
-            scanf("%f", &n2);
-            fflush(stdin);
-            printf("\n");
-            do {
-                selecionarOperacao();
-                mostrarResultado();
-                fflush(stdin);
-            } while (operacao != '+' && operacao != '-' && operacao != 'x' && operacao != '/');
-            do {
-                printf("Deseja realizar uma nova operação?\n Digite 's' para SIM ou 'n' para NÃO: ");
-                scanf("%c", &novaOperacao);
-                printf("\n");
-                fflush(stdin);
-                if (novaOperacao == 's') {
-                    do {
-                        printf("Deseja utilizar o último resultado em uma nova operação?\n 
-                                Digite 's' para SIM ou 'n' para NÃO: ");
-                        scanf("%c", &memoriaResultado);
-                        printf("\n");
-                        fflush(stdin);
-                        if (memoriaResultado != 's' && memoriaResultado != 'n') {
-                            printf("Opção inválida. Tente novamente.\n\n");
-                        }
-                    } while (memoriaResultado != 's' && memoriaResultado != 'n');
-                } else if (novaOperacao == 'n') {
-                    system("PAUSE");
-                } else {
-                    printf("Opção inválida. Tente novamente.\n\n");
-                }
-            } while (novaOperacao != 's' && novaOperacao != 'n');
-        } while (novaOperacao == 's');
-    }
-    
-    char selecionarOperacao()
-    {
-        printf("Escolha uma operação. \n Digite: \n '+' - para soma \n 
-                                                    '-' - para subtração \n 
-                                                    'x' - para multiplicação \n 
-                                                    '/' - para divisão: ");
-        scanf("%c", &operacao);
-        printf("\n");
-        return operacao;
-    }
-    
-    void mostrarResultado()
-    {
-        if (operacao == '+') {
-            resultado = calcSoma(n1, n2);
-            printf("Resultado: %3.2f\n\n", resultado);
-        }
-        else if (operacao == '-') {
-            resultado = calcSubtracao(n1, n2);
-            printf("Resultado: %3.2f\n\n", resultado);
-        }
-        else if (operacao == 'x') {
-            resultado = calcMultiplicacao(n1, n2);
-            printf("Resultado: %3.2f\n\n", resultado);
-        }
-        else if (operacao == '/') {
-            resultado = calcDivisao(n1, n2);
-            printf("Resultado: %3.2f\n\n", resultado);
+#include "stdio.h"
+#include "locale.h"
+#include "iostream"
+                            
+float n1, n2, resultado;
+char operacao, memoriaResultado, novaOperacao;
+                            
+char selecionarOperacao();
+void mostrarResultado();
+float calcSoma(float x, float y);
+float calcSubtracao(float x, float y);
+float calcMultiplicacao(float x, float y);
+float calcDivisao(float x, float y);
+                    
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    do {
+        if (memoriaResultado == 's') {
+            n1 = resultado;
         }
         else {
-            printf("Erro. Selecione uma operação válida.\n\n");
+            printf("Digite o primeiro valor: ");
+            scanf("%f", &n1);
+            fflush(stdin);
         }
+        printf("Digite o segundo valor: ");
+        scanf("%f", &n2);
+        fflush(stdin);
+        printf("\n");
+        do {
+            selecionarOperacao();
+            mostrarResultado();
+            fflush(stdin);
+        } while (operacao != '+' && 
+                 operacao != '-' && 
+                 operacao != 'x' && 
+                 operacao != '/');
+        do {
+            printf("Deseja realizar uma nova operação?\n 
+                    Digite 's' para SIM ou 'n' para NÃO: ");
+            scanf("%c", &novaOperacao);
+            printf("\n");
+            fflush(stdin);
+            if (novaOperacao == 's') {
+                do {
+                    printf("Deseja utilizar o último resultado em uma nova operação?\n 
+                            Digite 's' para SIM ou 'n' para NÃO: ");
+                    scanf("%c", &memoriaResultado);
+                    printf("\n");
+                    fflush(stdin);
+                    if (memoriaResultado != 's' && memoriaResultado != 'n') {
+                        printf("Opção inválida. Tente novamente.\n\n");
+                    }
+                } while (memoriaResultado != 's' && memoriaResultado != 'n');
+            } else if (novaOperacao == 'n') {
+                system("PAUSE");
+            } else {
+                printf("Opção inválida. Tente novamente.\n\n");
+            }
+        } while (novaOperacao != 's' && novaOperacao != 'n');
+    } while (novaOperacao == 's');
+}
+
+char selecionarOperacao()
+{
+    printf("Escolha uma operação. \n Digite: \n '+' - para soma \n 
+                                                '-' - para subtração \n 
+                                                'x' - para multiplicação \n 
+                                                '/' - para divisão: ");
+    scanf("%c", &operacao);
+    printf("\n");
+    return operacao;
+}
+
+void mostrarResultado()
+{
+    if (operacao == '+') {
+        resultado = calcSoma(n1, n2);
+        printf("Resultado: %3.2f\n\n", resultado);
     }
-    
-    float calcSoma(float x, float y)
-    {
-        float soma;
-        soma = x + y;
-        return soma;
+    else if (operacao == '-') {
+        resultado = calcSubtracao(n1, n2);
+        printf("Resultado: %3.2f\n\n", resultado);
     }
-    
-    float calcSubtracao(float x, float y)
-    {
-        float subtracao;
-        subtracao = x - y;
-        return subtracao;
+    else if (operacao == 'x') {
+        resultado = calcMultiplicacao(n1, n2);
+        printf("Resultado: %3.2f\n\n", resultado);
     }
-    
-    float calcMultiplicacao(float x, float y)
-    {
-        float multiplicacao;
-        multiplicacao = x * y;
-        return multiplicacao;
+    else if (operacao == '/') {
+        resultado = calcDivisao(n1, n2);
+        printf("Resultado: %3.2f\n\n", resultado);
     }
-    
-    float calcDivisao(float x, float y)
-    {
-        float divisao;
-        divisao = x / y;
-        return divisao;
+    else {
+        printf("Erro. Selecione uma operação válida.\n\n");
     }
+}
+
+float calcSoma(float x, float y)
+{
+    float soma;
+    soma = x + y;
+    return soma;
+}
+
+float calcSubtracao(float x, float y)
+{
+    float subtracao;
+    subtracao = x - y;
+    return subtracao;
+}
+
+float calcMultiplicacao(float x, float y)
+{
+    float multiplicacao;
+    multiplicacao = x * y;
+    return multiplicacao;
+}
+
+float calcDivisao(float x, float y)
+{
+    float divisao;
+    divisao = x / y;
+    return divisao;
+}
                     </code>
                 </pre>
             </div>

@@ -2,17 +2,20 @@
     height: 1780px;
     width: 90%;
     text-align: unset;
-    background-color: #eeeeee;
-    border: 1px solid black;
-    padding: 0 5px 0 0;
+    padding: 0 0 20px 0;
     font-size: 12px;
 }
 
 #body-container h2 {
     text-align: center;
-    padding: 10px 0 10px 0;
+    padding: 0px 0 20px 0;
     font-size: 20px;
 }
+
+#body-container code {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 
 
