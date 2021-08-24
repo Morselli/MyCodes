@@ -1,0 +1,16 @@
+#body-container {
+    text-align: unset;
+    width: 1250px;
+    height: 1820px;
+    background-color: #eeeeee;
+    border: 1px solid black;
+}
+
+#body-container h2 {
+    text-align: center;
+    padding: 5px 0 5px 0;
+}
+
+#body-container code {
+    margin: 0 auto;
+}

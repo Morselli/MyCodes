@@ -1,0 +1,26 @@
+.code-post {
+    width: 250px;
+    height: 40px;
+    background-color: #d24d57;
+    margin: 0px 10px 10px 0;
+    align-items: center;
+}
+
+.space {
+    height: 10px;
+}
+
+.code-post a {
+    text-decoration: none;
+    color: white;
+}
+
+.code-post a h2 {
+    padding: 6px;
+}
+
+
+.code-post a h2:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid black;
+}
