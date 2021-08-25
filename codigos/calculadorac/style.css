@@ -3,7 +3,6 @@
     width: 90%;
     text-align: unset;
     font-size: 12px;
-    box-sizing: border-box;
 }
 
 #body-container h2 {
@@ -22,6 +21,10 @@
 
 #body-container code {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#ending {
+    margin-top: 80px;
 }
 
 
