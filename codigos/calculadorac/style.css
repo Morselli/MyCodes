@@ -3,6 +3,7 @@
     width: 90%;
     text-align: unset;
     font-size: 12px;
+    box-sizing: border-box;
 }
 
 #body-container h2 {
