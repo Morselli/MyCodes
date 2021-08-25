@@ -3,6 +3,7 @@
     width: 90%;
     text-align: unset;
     font-size: 12px;
+    margin-bottom: 150px;
 }
 
 #body-container h2 {
@@ -24,8 +25,9 @@
 }
 
 #ending {
-    margin-top: 80px;
+    margin-bottom: 1px;
 }
+
 
 
 
