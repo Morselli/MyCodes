@@ -1,15 +1,22 @@
 #body-container {
-    height: 1780px;
+    height: 1950px;
     width: 90%;
     text-align: unset;
-    padding-bottom: 70px;
     font-size: 12px;
 }
 
 #body-container h2 {
     text-align: center;
-    padding: 0px 0 20px 0;
+    margin: 0px 0 20px 0;
     font-size: 20px;
+}
+
+#body-container h3 {
+    margin: 5px 0 5px 0;
+}
+
+#body-container p {
+    margin-bottom: 5px;
 }
 
 #body-container code {

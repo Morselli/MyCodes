@@ -11,14 +11,16 @@
     <body>
         <header id="heading">
             <div id="titulo">
-                <h1><a href="/MyCodes/">MyCodes</a></h1>
+                <a href="/MyCodes/">
+                    <img src="../../img/code-icon.png" alt="">
+                    <h1>MyCodes</h1>
+                </a>
             </div>
             <nav>
                 <ul>
                     <a href="../codigos.html"><li>Códigos</li></a>
-                    <a href="#"><li>Sobre Mim</li></a>
-                    <a href="#"><li>Contato</li></a>
-                    <a href="#"><li>Mais</li></a>                    
+                    <a href="../../sobremim/sobre-mim.html"><li>Sobre Mim</li></a>
+                    <a href="../../contato/contato.html"><li>Contato</li></a>
                 </ul>
             </nav>
         </header>
@@ -26,6 +28,19 @@
         <section id="body-container">
             <div class="title-center">
                 <h2>Calculadora em C</h2>
+                <hr>
+                <h3>Atividade proposta:</h3>
+                <p>
+                    Implemente em C uma calculadora com com cinco operações entre dois valores de entrada. 
+                    As quatro operações básicas da matemática (divisão, multiplicação, subtração e soma) e 
+                    mais uma que seria como se fosse uma memória, ou seja, o usuário poderia aproveitar o 
+                    resultado obtido em uma operação anterior (se houver), em uma nova operação:<br><br>
+
+                    Ex: Supondo que o usuário tenha escolhido o dois valores, 4 e 3 e optado pela soma, 
+                    o resultado será 7. Em uma nova operação, ele deverá escolher se deseja reaproveitar 
+                    esse valor 7 para compor um novo calculo ou entrar com novos dois valores. 
+                </p>
+                <hr>
                 <pre>
                     <code>
 #include "stdio.h"
@@ -162,7 +177,7 @@ float calcDivisao(float x, float y)
         </section>
 
         <footer id="ending">
-            <p>Desenvolvido por Vinicius Morselli, 2021.</p>
+            <p>Desenvolvido por <a href="https://www.linkedin.com/in/vinicius-morselli-53967617b/" target="_blank"><u>Vinicius Morselli</u></a>, 2021.</p>
         </footer>   
 
     </body>
